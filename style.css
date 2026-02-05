@@ -1,0 +1,98 @@
+/* THEME VARIABLES */
+:root {
+    --bg-color: #f4f6f8;
+    --card-bg: #ffffff;
+    --text-color: #000000;
+    --button-bg: #007bff;
+    --button-hover: #0056b3;
+}
+
+.dark {
+    --bg-color: #121212;
+    --card-bg: #1e1e1e;
+    --text-color: #ffffff;
+    --button-bg: #0d6efd;
+    --button-hover: #0b5ed7;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    text-align: center;
+}
+
+h1 {
+    padding: 20px;
+}
+
+/* TOGGLE BUTTON */
+.theme-toggle {
+    padding: 6px 14px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    background-color: var(--button-bg);
+    color: white;
+    margin-bottom: 10px;
+}
+
+/* GRID DASHBOARD */
+.dashboard {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* CARD */
+.card {
+    background: var(--card-bg);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.full-width {
+    grid-column: span 2;
+}
+
+/* INPUTS */
+input {
+    width: 90%;
+    padding: 8px;
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 8px 14px;
+    background-color: var(--button-bg);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--button-hover);
+}
+
+li {
+    text-align: left;
+    cursor: pointer;
+    margin: 5px 0;
+}
+
+canvas {
+    max-width: 100%;
+}
+
+/* MOBILE */
+@media (max-width: 700px) {
+    .full-width {
+        grid-column: span 1;
+    }
+}

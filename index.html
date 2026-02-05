@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Smart Student Productivity Dashboard</title>
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    <h1>📚 Smart Student Productivity Dashboard</h1>
+
+    <!-- Dark Mode Toggle -->
+    <button class="theme-toggle" onclick="toggleTheme()">🌙 Dark Mode</button>
+
+    <div class="dashboard">
+
+        <!-- Task Manager -->
+        <div class="card">
+            <h2>📝 Task Manager</h2>
+            <input type="text" id="taskInput" placeholder="Enter task">
+            <button onclick="addTask()">Add Task</button>
+            <ul id="taskList"></ul>
+        </div>
+
+        <!-- Study Time -->
+        <div class="card">
+            <h2>⏱️ Study Time Tracker</h2>
+            <input type="number" id="studyInput" placeholder="Hours studied today">
+            <button onclick="addStudyTime()">Add Hours</button>
+            <p id="totalTime">Total Study Time: 0 hrs</p>
+        </div>
+
+        <!-- Smart Insight -->
+        <div class="card">
+            <h2>📊 Smart Insight</h2>
+            <p id="insight">Start adding data to see insights.</p>
+        </div>
+
+        <!-- Study Chart -->
+        <div class="card">
+            <h2>📈 Study Time</h2>
+            <canvas id="studyChart"></canvas>
+        </div>
+
+        <!-- Task Chart -->
+        <div class="card full-width">
+            <h2>🥧 Task Completion</h2>
+            <canvas id="taskChart"></canvas>
+        </div>
+
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
