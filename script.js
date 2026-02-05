@@ -152,4 +152,29 @@ function updateCharts() {
         }
     );
 }
+
+// =====================
+// RESET DASHBOARD DATA
+// =====================
+function resetDashboard() {
+
+    if (!confirm("Are you sure you want to clear all dashboard data?")) {
+        return;
+    }
+
+    // Clear only project-related data
+    localStorage.removeItem("tasks");
+    localStorage.removeItem("studyTime");
+
+    // Reset variables
+    tasks = [];
+    studyTime = 0;
+
+    // Update UI
+    updateTasks();
+    updateStudyTime();
+    updateInsight();
+    updateCharts();
+}
+
 // ===================== END OF FILE =====================

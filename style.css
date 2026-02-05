@@ -96,3 +96,17 @@ canvas {
         grid-column: span 1;
     }
 }
+
+.reset-btn {
+    margin-left: 10px;
+    padding: 6px 14px;
+    border-radius: 20px;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.reset-btn:hover {
+    background-color: #b02a37;
+}
